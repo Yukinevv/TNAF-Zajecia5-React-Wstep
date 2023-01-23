@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#app-todo-container {
+    width: 1000px;
+    min-height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 120px;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 34px;
+}
+
+.textarea-task-value {
+    border-radius: 10px;
+    width: 400px;
+    height: 150px;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.add-task-button {
+    width: 190px;
+    height: 30px;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: 0.7s;
+    background-color: rgb(153, 255, 0);
+}
+
+.add-task-button:hover {
+    border-radius: 20px;
+    background-color: rgb(30, 184, 30);
+}

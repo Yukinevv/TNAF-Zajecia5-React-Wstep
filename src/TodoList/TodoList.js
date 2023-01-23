@@ -1,11 +1,11 @@
 import React from "react";
 import TodoTile from "../TodoTile/TodoTile";
+import './TodoList.css';
 
 function TodoList(params) {
 
     return (
-        <div>
-            <h2>Zadania do wykonania</h2>
+        <div id={params.taskList.length > 4 ? 'task-list-container' : ''}>
             <ul>
                 {params.taskList.map(task => <TodoTile id={task.id} value={task.value} deleteTask={params.deleteTask} editTask={params.editTask} />)}
             </ul>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TodoList from '../TodoList/TodoList';
+import './AppTodo.css';
 
 function AppTodo() {
 
@@ -40,11 +41,12 @@ function AppTodo() {
     }
 
     return (
-        <div>
+        <div id="app-todo-container">
+            <h2>Zadania do wykonania</h2>
             <TodoList taskList={taskList} deleteTask={deleteTask} editTask={editTask} />
 
-            <input type="text" value={taskValue} onChange={e => setTaskValue(e.target.value)}></input>
-            <button type="button" onClick={() => addTask(taskId, false)}>Dodaj zadanie</button>
+            <textarea className="textarea-task-value" placeholder="Tu wpisz tresc zadania..." value={taskValue} onChange={e => setTaskValue(e.target.value)}></textarea>
+            <button type="button" className="add-task-button" onClick={() => addTask(taskId, false)}>Dodaj zadanie</button>
         </div>
     );
 }
